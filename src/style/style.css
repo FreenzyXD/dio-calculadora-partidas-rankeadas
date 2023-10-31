@@ -1,0 +1,26 @@
+body {
+    
+    background: url(/assets/fundo.jpg);
+    background-size: cover;
+    
+}
+h1 {
+    display: flex;
+    background-color: rgba(108, 108, 109, 0.968);
+    text-align: center;
+    justify-content: center;
+    border: 1px solid rgba(94, 91, 91, 0.34);
+    border-radius: 20px;
+    font-size: 60px;
+    margin: 0px 200px 20px 200px;
+}
+h2 {
+    display: flex;
+    background-color: rgba(108, 108, 109, 0.968);
+    text-align: center;
+    justify-content: center;
+    border: 1px solid rgba(94, 91, 91, 0.34);
+    border-radius: 20px;
+    font-size: 45px;
+    margin: 30px 350px 0px 350px;
+}
