@@ -4,14 +4,18 @@ function calcularRankeadas() {
     const nivel = descobreNivel(vitorias, derrotas);
     const totalPartidas = (vitorias + derrotas);
     const porcentagemVitorias = (vitorias / totalPartidas) * 100;
+    const saldoDeVitorias = (vitorias - derrotas)
 
     const resultado = document.getElementById('resultado');
     resultado.innerHTML = `
                 <li>Total de Partidas: ${totalPartidas}</li>
                 <li>Vitórias: ${vitorias}</li>
                 <li>Derrotas: ${derrotas}</li>
+                <li>Saldo de Vitorias: ${saldoDeVitorias}
                 <li>Nível: ${nivel}</li>
-                <li>Taxa de Vitória: ${porcentagemVitorias.toFixed(2)}%</li>`;
+                <li>Taxa de Vitória: ${porcentagemVitorias.toFixed(1)}%</li>
+                <li>O herói tem o saldo de ${saldoDeVitorias} e está no nível ${nivel}</li>`
+
 }
 
 function descobreNivel(vitorias, derrotas) {
