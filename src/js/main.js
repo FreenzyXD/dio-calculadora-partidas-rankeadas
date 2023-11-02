@@ -17,12 +17,11 @@ function calcularRankeadas() {
                 <li>O herói tem o saldo de ${saldoDeVitorias} e está no nível ${nivel}</li>`
 
 }
-
 function descobreNivel(vitorias, derrotas) {
     let nivel = false;
     const totalVitorias = (vitorias - derrotas)
 
-    switch (!isNaN(totalVitorias)) {
+    switch (!isFinite (totalVitorias)) {
         case totalVitorias > 100:
             nivel = "Imortal"
             break;
