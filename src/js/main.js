@@ -1,27 +1,33 @@
-function calcularRankeadas() {
-    const vitorias = parseInt(document.getElementById('vitorias').value);
-    const derrotas = parseInt(document.getElementById('derrotas').value);
-    const nivel = descobreNivel(vitorias, derrotas);
-    const totalPartidas = (vitorias + derrotas);
-    const porcentagemVitorias = (vitorias / totalPartidas) * 100;
-    const saldoDeVitorias = (vitorias - derrotas)
-
-    const resultado = document.getElementById('resultado');
-    resultado.innerHTML = `
-                <li>Total de Partidas: ${totalPartidas}</li>
-                <li>Vitórias: ${vitorias}</li>
-                <li>Derrotas: ${derrotas}</li>
-                <li>Saldo de Vitorias: ${saldoDeVitorias}
-                <li>Nível: ${nivel}</li>
-                <li>Taxa de Vitória: ${porcentagemVitorias.toFixed(1)}%</li>
-                <li>O herói tem o saldo de ${saldoDeVitorias} e está no nível ${nivel}</li>`
-
+document.getElementById("calcularButton").onclick = function(event) {
+    event.preventDefault();
+    calcularRankeadas();
 }
+
+function calcularRankeadas() {
+    let dados = []
+
+    dados["Vitórias"] = parseInt(document.getElementById('vitorias').value);
+    dados["Derrotas"] = parseInt(document.getElementById('derrotas').value);
+    dados["Nível"] =  descobreNivel(dados["Vitórias"], dados["Derrotas"]);
+    dados["Total de Partidas"] = (dados["Vitórias"] + dados["Derrotas"]);
+    dados["Porcentagem de Vitorias"] = ((dados["Vitórias"] / dados["Total de Partidas"]) * 100).toFixed(1);
+    dados["Saldo de Vitorias"] = (dados["Vitórias"] - dados["Derrotas"]);
+
+    let resultado = document.getElementById('resultado');
+    let html = ""
+    
+    for (let dado in dados) {
+        html += `<li>${dado}: ${dados[dado]}</li>`;
+    }
+
+    resultado.innerHTML = html;
+}
+
 function descobreNivel(vitorias, derrotas) {
     let nivel = false;
     const totalVitorias = (vitorias - derrotas)
 
-    switch (!isFinite (totalVitorias)) {
+    switch (!isNaN(totalVitorias)) {
         case totalVitorias > 100:
             nivel = "Imortal"
             break;

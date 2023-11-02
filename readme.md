@@ -13,7 +13,7 @@
 Também acrescentei alguns resultados como o total de partidas e a taxa de vitorias.
 
 ## Desenvolvimento
-De fundo acabei usando uma imagem genérica do google, e um CSS bem simples, utilizei como pedido uam estrutura de decisão, função, variáveis e operadores para soma.
+De fundo acabei usando uma imagem genérica do google, e um CSS bem simples, utilizei como pedido uam estrutura de decisão, um laço de repetição, função, variáveis e operadores para soma.
 
 ### Fontes 
 
@@ -24,3 +24,4 @@ Ajuda para resolver problemas com o ChatGPT e fórums no Reddit
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 ![Markdown](https://img.shields.io/badge/markdown-%23000000.svg?style=for-the-badge&logo=markdown&logoColor=white)
+
